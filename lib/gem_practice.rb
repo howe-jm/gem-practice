@@ -2,7 +2,12 @@
 
 require_relative "gem_practice/version"
 
-module GemPractice
-  class Error < StandardError; end
-  # Your code goes here...
+class String
+  private def processed_content
+    downcase
+  end
+
+  def palindrome?
+    processed_content == processed_content.reverse
+  end
 end
