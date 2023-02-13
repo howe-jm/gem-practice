@@ -4,7 +4,7 @@ require_relative "gem_practice/version"
 
 class String
   private def processed_content
-    downcase
+    gsub(/[^a-zA-Z]/, '').downcase
   end
 
   def palindrome?
